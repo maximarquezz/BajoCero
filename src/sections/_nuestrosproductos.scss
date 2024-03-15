@@ -2,45 +2,126 @@
 @use '../global/variables' as variables;
 
 #nuestrosproductos{
-    @extend .sections_w-and-h;
-    background: url("../../public/assets/images/texture.png");
-    background-position: center;
-    background-size: cover;
     @extend .flex-col_spc-evly;
-    padding: 0 1.5rem;
+    padding: 2rem 1.5rem;
     color: #000;
 }
 
 .nuestrosproductos__sub-subtitle{
-    background-color: variables.$red-700_maincolor;
-    padding: 1rem;
+    padding-bottom: 2rem;
     font-family: 'Oswald-ExtraLight', roboto;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     text-align: center;
-    text-shadow: -2px 2px 3px variables.$red-700_maincolor;
-    color: variables.$red-50;
+    color: #000;
     @extend .border-rad_5px;
 }
 
-.nuestrosproductos__container{
-    background-color: variables.$red-300;
-    height: 70%;
-    @extend .border-rad_10px;
-    @extend .flex-col_spc-btw;
-    padding: 1.5rem;
+.nuestrosproductos__slider{
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
 }
 
-.nuestrosproductos__parrafo{
-    line-height: 1.3rem;
-    font-size: 1rem;
+.nuestrosproductos__slider--track{
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
 }
 
-.nuestrosproductos__button{
+.nuestrosproductos__slider--slide{
+    width: 150px;
+    height: 150px;
+}
+
+.nuestrosproductos__slider,
+.nuestrosproductos__slider--slide img{
     width: 100%;
+}
+
+.nuestrosproductos__slider--slide{
+    @extend .flex-row_spc-evly;
+    @extend .border-rad_50percent;
+    padding: 10px;
     text-align: center;
-    padding: 1rem;
-    background-color: variables.$red-700_maincolor;
-    text-decoration: none;
-    color: variables.$red-50;
-    @extend .border-rad_5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: -2px 2px 5px black;
+
+    &:nth-child(1){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/frutasalacrema_kinotos-al-whisky.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(2){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/dulcedeleche_dulce-de-leche-granizado.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(3){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/frutasalacrema_frutilla-a-la-crema.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(4){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/saboresespeciales_cremacookie.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(5){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/crema_crema-americana.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(6){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/crema_vainilla.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(7){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/cremasespeciales_flan.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(8){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/frutasalacrema_anana-a-la-crema.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(9){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/frutasalacrema_durazno-a-la-crema.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(10){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/frutasalagua_limon.jpg);
+        margin-right: 15px;
+    }
+    &:nth-child(11){
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(../../public/assets/images/frutasalagua_naranja.jpg);
+    }
+}
+
+.main-button{
+    margin-top: 2rem;
+}
+
+.nuestrosproductos__button--link{
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(calc(-200px*7));
+    }
+    100%{
+        transform: translateX(0);
+    }
 }

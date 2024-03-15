@@ -1,16 +1,16 @@
 //base
-@use 'base/reset' as reset;
+@use 'base/_reset' as reset;
 
 //components
-@use 'components/button' as button;
-@use 'components/card' as card;
-@use 'components/navbar' as navbar;
+@use 'components/_button' as button;
+@use 'components/_card' as card;
+@use 'components/_navbar' as navbar;
 
 //global
 @use 'global/_global' as global;
-@use 'global/utils' as utils;
+@use 'global/_utils' as utils;
 @use 'global/_variables.scss' as variables;
-@use 'global/icons' as icons;
+@use 'global/_icons' as icons;
 
 //sections
 @use 'sections/hero' as hero;

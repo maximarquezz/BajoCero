@@ -2,3 +2,10 @@
 @use '../global/variables' as variables;
 @use '../global/utils' as utils;
 
+.main-button{
+    background-color: variables.$red-700_maincolor;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 600;
+    @extend .border-rad_10px;
+}

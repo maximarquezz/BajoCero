@@ -69,7 +69,7 @@ input {
   flex-direction: row;
 }
 
-.flex-col_spc-btw, .nuestrosproductos__container {
+.flex-col_spc-btw {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +85,7 @@ input {
   flex-direction: column;
 }
 
-.flex-row_spc-evly, #hero {
+.flex-row_spc-evly, .nuestrosproductos__slider--slide, #hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,7 +218,7 @@ input {
   -o-border-radius: 20px;
 }
 
-.border-rad_10px, .nuestrosproductos__container {
+.border-rad_10px, .main-button {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -226,7 +226,7 @@ input {
   -o-border-radius: 10px;
 }
 
-.border-rad_5px, .nuestrosproductos__sub-subtitle, .nuestrosproductos__button {
+.border-rad_5px, .nuestrosproductos__sub-subtitle {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -234,7 +234,7 @@ input {
   -o-border-radius: 5px;
 }
 
-.border-rad_50percent, .swiper-button-prev,
+.border-rad_50percent, .nuestrosproductos__slider--slide, .swiper-button-prev,
 .swiper-button-next {
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -269,7 +269,7 @@ input {
   -o-border-bottom-right-radius: 20px;
 }
 
-.sections_w-and-h, #nuestrosproductos {
+.sections_w-and-h {
   width: 100%;
   height: 100vh;
 }
@@ -277,6 +277,13 @@ input {
 .w-and-h_100percent {
   width: 100%;
   height: 100%;
+}
+
+.main-button {
+  background-color: #ac172e;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 600;
 }
 
 /*_card.scss*/
@@ -539,6 +546,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*_icons.scss*/
 /*_animations.scss*/
 #hero {
@@ -588,41 +599,112 @@ body {
 }
 
 #nuestrosproductos {
-  background: url("../../public/assets/images/texture.png");
-  background-position: center;
-  background-size: cover;
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
   color: #000;
 }
 
 .nuestrosproductos__sub-subtitle {
-  background-color: #ac172e;
-  padding: 1rem;
+  padding-bottom: 2rem;
   font-family: "Oswald-ExtraLight", roboto;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   text-align: center;
-  text-shadow: -2px 2px 3px #ac172e;
-  color: #fef3f2;
+  color: #000;
 }
 
-.nuestrosproductos__container {
-  background-color: #faa7ab;
-  height: 70%;
-  padding: 1.5rem;
+.nuestrosproductos__slider {
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
 }
 
-.nuestrosproductos__parrafo {
-  line-height: 1.3rem;
-  font-size: 1rem;
+.nuestrosproductos__slider--track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  width: 2800px;
 }
 
-.nuestrosproductos__button {
+.nuestrosproductos__slider--slide {
+  width: 150px;
+  height: 150px;
+}
+
+.nuestrosproductos__slider,
+.nuestrosproductos__slider--slide img {
   width: 100%;
+}
+
+.nuestrosproductos__slider--slide {
+  padding: 10px;
   text-align: center;
-  padding: 1rem;
-  background-color: #ac172e;
-  text-decoration: none;
-  color: #fef3f2;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: -2px 2px 5px black;
+}
+.nuestrosproductos__slider--slide:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/frutasalacrema_kinotos-al-whisky.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/dulcedeleche_dulce-de-leche-granizado.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/frutasalacrema_frutilla-a-la-crema.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(4) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/saboresespeciales_cremacookie.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(5) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/crema_crema-americana.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(6) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/crema_vainilla.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(7) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/cremasespeciales_flan.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(8) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/frutasalacrema_anana-a-la-crema.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(9) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/frutasalacrema_durazno-a-la-crema.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(10) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/frutasalagua_limon.jpg);
+  margin-right: 15px;
+}
+.nuestrosproductos__slider--slide:nth-child(11) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../public/assets/images/frutasalagua_naranja.jpg);
+}
+
+.main-button {
+  margin-top: 2rem;
+}
+
+.nuestrosproductos__button--link {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-1400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
