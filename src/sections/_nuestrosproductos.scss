@@ -1,0 +1,46 @@
+@use '../global/utils' as utils;
+@use '../global/variables' as variables;
+
+#nuestrosproductos{
+    @extend .sections_w-and-h;
+    background: url("../../public/assets/images/texture.png");
+    background-position: center;
+    background-size: cover;
+    @extend .flex-col_spc-evly;
+    padding: 0 1.5rem;
+    color: #000;
+}
+
+.nuestrosproductos__sub-subtitle{
+    background-color: variables.$red-700_maincolor;
+    padding: 1rem;
+    font-family: 'Oswald-ExtraLight', roboto;
+    font-size: 2.6rem;
+    text-align: center;
+    text-shadow: -2px 2px 3px variables.$red-700_maincolor;
+    color: variables.$red-50;
+    @extend .border-rad_5px;
+}
+
+.nuestrosproductos__container{
+    background-color: variables.$red-300;
+    height: 70%;
+    @extend .border-rad_10px;
+    @extend .flex-col_spc-btw;
+    padding: 1.5rem;
+}
+
+.nuestrosproductos__parrafo{
+    line-height: 1.3rem;
+    font-size: 1rem;
+}
+
+.nuestrosproductos__button{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: variables.$red-700_maincolor;
+    text-decoration: none;
+    color: variables.$red-50;
+    @extend .border-rad_5px;
+}

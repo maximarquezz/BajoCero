@@ -1,0 +1,23 @@
+{
+  "name": "bajo-cero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximarquezz/BajoCero.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximarquezz/BajoCero/issues"
+  },
+  "homepage": "https://github.com/maximarquezz/BajoCero#readme",
+  "dependencies": {
+    "sass": "^1.70.0",
+    "swiper": "^11.0.7"
+  }
+}

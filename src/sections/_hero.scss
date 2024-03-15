@@ -1,0 +1,50 @@
+@use "../global/variables" as variables;
+@use "../global/utils" as utils;
+
+#hero{
+    @extend .flex-row_spc-evly;
+    border-bottom: 10px solid variables.$red-700_maincolor;
+}
+
+.hero__subtitle{
+    font-family: 'Valencia';
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: -3px 3px 1px variables.$red-700_maincolor;
+}
+
+.swiper{
+    --swiper-navigation-size: 20px;
+    --swiper-theme-color: white;
+    font-weight: bolder;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    padding: 20px;
+    @extend .border-rad_50percent;
+    background-color: variables.$red-700_maincolor;
+}
+
+.swiper-pagination-bullet{
+    --swiper-pagination-bullet-inactive-color: red;
+}
+
+.swiper-slide::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0,0,0,0), rgba(0, 0, 0, 0.807));
+    z-index: 1000;
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
